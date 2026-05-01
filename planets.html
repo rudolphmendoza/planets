@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Planet Facts</title>
+  </head>
+  <body>
+    <h1>🌍 Planet Facts</h1>
+
+    <button onclick="showFact('mercury')">Mercury</button>
+    <button onclick="showFact('venus')">Venus</button>
+    <button onclick="showFact('earth')">Earth</button>
+    <button onclick="showFact('mars')">Mars</button>
+    <button onclick="showFact('jupiter')">Jupiter</button>
+    <!-- Added Saturn button -->
+    <button onclick="showFact('saturn')">Saturn</button>
+
+    <p id="fact"></p>
+
+    <script>
+      function showFact(planet) {
+        let facts = {
+          mercury: "Mercury is the closest planet to the Sun.",
+          venus: "Venus is the hottest planet.",
+          earth: "Earth is our home planet.",
+          mars: "Mars is known as the red planet.",
+          jupiter: "Jupiter is the largest planet.",
+          // Added Saturn fact
+          saturn: "Saturn is famous for its beautiful rings.",
+        };
+
+        document.getElementById("fact").innerText = facts[planet];
+      }
+    </script>
+  </body>
+</html>
