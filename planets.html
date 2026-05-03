@@ -2,6 +2,31 @@
 <html>
   <head>
     <title>Planet Facts</title>
+    <!-- Added styles to center and enlarge text -->
+    <!-- Added background image and adjusted text color for outer space theme -->
+    <style>
+      body {
+        text-align: center;
+        font-size: 1.5em;
+        background: url('outerspace.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #f0f0f0; /* Light gray for better contrast on space background */
+        margin: 0;
+        padding: 20px;
+      }
+      button {
+        margin: 5px;
+        font-size: 1em;
+        background: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+        color: white;
+        border: 1px solid #666;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: rgba(85, 85, 85, 0.8);
+      }
+    </style>
   </head>
   <body>
     <h1>🌍 Planet Facts</h1>
@@ -13,6 +38,10 @@
     <button onclick="showFact('jupiter')">Jupiter</button>
     <!-- Added Saturn button -->
     <button onclick="showFact('saturn')">Saturn</button>
+    <!-- Added Uranus button -->
+    <button onclick="showFact('uranus')">Uranus</button>
+    <!-- Added Neptune button -->
+    <button onclick="showFact('neptune')">Neptune</button>
 
     <p id="fact"></p>
 
@@ -26,6 +55,10 @@
           jupiter: "Jupiter is the largest planet.",
           // Added Saturn fact
           saturn: "Saturn is famous for its beautiful rings.",
+          // Added Uranus fact
+          uranus: "Uranus is the seventh planet from the Sun and rotates on its side.",
+          // Added Neptune fact
+          neptune: "Neptune is the eighth and farthest planet from the Sun.",
         };
 
         document.getElementById("fact").innerText = facts[planet];
