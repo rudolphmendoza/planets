@@ -8,7 +8,7 @@
       body {
         text-align: center;
         font-size: 1.5em;
-        background: url('outerspace.jpg') no-repeat center center fixed;
+        background: url("outerspace.jpg") no-repeat center center fixed;
         background-size: cover;
         color: #f0f0f0; /* Light gray for better contrast on space background */
         margin: 0;
@@ -17,7 +17,12 @@
       button {
         margin: 5px;
         font-size: 1em;
-        background: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+        background: rgba(
+          51,
+          51,
+          51,
+          0.8
+        ); /* Semi-transparent dark background */
         color: white;
         border: 1px solid #666;
         padding: 10px 20px;
@@ -25,6 +30,11 @@
       }
       button:hover {
         background: rgba(85, 85, 85, 0.8);
+      }
+      img {
+        margin-top: 20px;
+        border-radius: 10px;
+        border: 3px solid white;
       }
     </style>
   </head>
@@ -45,6 +55,8 @@
 
     <p id="fact"></p>
 
+    <img id="planetImage" src="" alt="Planet Image" width="400" />
+
     <script>
       function showFact(planet) {
         let facts = {
@@ -53,15 +65,25 @@
           earth: "Earth is our home planet.",
           mars: "Mars is known as the red planet.",
           jupiter: "Jupiter is the largest planet.",
-          // Added Saturn fact
           saturn: "Saturn is famous for its beautiful rings.",
-          // Added Uranus fact
-          uranus: "Uranus is the seventh planet from the Sun and rotates on its side.",
-          // Added Neptune fact
+          uranus:
+            "Uranus is the seventh planet from the Sun and rotates on its side.",
           neptune: "Neptune is the eighth and farthest planet from the Sun.",
         };
 
+        let images = {
+          mercury: "mercury.jpg",
+          venus: "venus.jpg",
+          earth: "earth.jpg",
+          mars: "mars.jpg",
+          jupiter: "jupiter.jpg",
+          saturn: "saturn.jpg",
+          uranus: "uranus.jpg",
+          neptune: "neptune.jpg",
+        };
+
         document.getElementById("fact").innerText = facts[planet];
+        document.getElementById("planetImage").src = images[planet];
       }
     </script>
   </body>
