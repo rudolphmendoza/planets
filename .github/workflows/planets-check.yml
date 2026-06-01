@@ -1,0 +1,20 @@
+name: Planets Project Check
+
+on:
+  push:
+
+jobs:
+  website-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Repository Files
+        run: ls -la
+
+      - name: Verify Website Files Exist
+        run: |
+          test -f index.html
+          echo "Website files found successfully!"
