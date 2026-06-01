@@ -16,5 +16,5 @@ jobs:
 
       - name: Verify Website Files Exist
         run: |
-          test -f index.html
+          test -f planets.html
           echo "Website files found successfully!"
